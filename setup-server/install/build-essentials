@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Updating Apt and Installing Build Essentials";
+sudo -E apt-get update;
+sudo -E apt-get install -y build-essential chrpath git-core libssl-dev fontconfig libfontconfig1-dev python-software-properties;
+sudo -E apt-get install -y g++ curl libssl-dev openssl pkg-config make unzip zip;

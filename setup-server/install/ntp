@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Installing ntpd";
+sudo -E apt-get install -y ntp;

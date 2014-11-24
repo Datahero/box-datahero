@@ -1,0 +1,16 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+
+echo "Installing Fonts";
+sudo -E mkdir -p /usr/local/share/fonts;
+sudo -E cp $DIR/font-assets/package.zip /usr/local/share/fonts/package.zip;
+sudo -E cp $DIR/font-assets/_dot_fonts.conf /home/$USER/.fonts.conf;
+cd /usr/local/share/fonts;
+sudo -E unzip package.zip;
+
+# datahero proxima-nova (refer to http://www.wikihow.com/Install-TrueType-Fonts-on-Ubuntu)
+sudo -E mkdir -p /usr/local/share/fonts/truetype;
+sudo -E cp -r $DIR/font-assets/proxima-nova /usr/local/share/fonts/truetype/;
+sudo -E chown root /usr/local/share/fonts/truetype/proxima-nova/*;
+sudo -E fc-cache -f -v;

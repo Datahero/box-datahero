@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Installing MySQL 5.6 Client";
+
+sudo -E add-apt-repository -y ppa:ondrej/mysql-5.6;
+sudo -E apt-get update;
+sudo -E apt-get install -y mysql-client=5.6*;

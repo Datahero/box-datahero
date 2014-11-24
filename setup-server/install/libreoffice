@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Installing LibreOffice 4.3";
+sudo -E add-apt-repository -y ppa:libreoffice/ppa;
+sudo -E apt-get update;
+sudo -E apt-get install -y libreoffice=1:4.3*

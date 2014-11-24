@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Creating directory to host application: $DATAHERO_NODE_DIRECTORY";
+sudo -E mkdir -p $DATAHERO_NODE_DIRECTORY;
+sudo -E chown -R ubuntu:ubuntu $DATAHERO_NODE_DIRECTORY;

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# This script installs software for the wercker test box. It does not configuration.
+
+# Make installations non-interactive
+export DEBIAN_FRONTEND=noninteractive
+
+# Set directory for where code will be
+export DATAHERO_NODE_DIRECTORY=$HOME/www;
+
+# Get current directory of script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+
+echo "Setting up DataHero Server";
+
+# Install all the things
+$DIR/../install/build-essentials
+$DIR/../install/ntp;
+$DIR/../install/libreoffice
+$DIR/../install/phantomjs
+$DIR/../install/fonts
+$DIR/../install/node
+$DIR/../install/node-global-packages
+$DIR/../install/python
+$DIR/../install/code-directory
+$DIR/../install/mysql-client;
+$DIR/../install/mysql-server;
+$DIR/../install/haproxy
+$DIR/../install/redis

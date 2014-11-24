@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Installing Redis 2.2";
+sudo -E apt-get install -y redis-server=2:2.2*;

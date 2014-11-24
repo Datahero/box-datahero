@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Installing Python and Virtualenv";
+
+sudo -E apt-get install -y python-setuptools=0.6*;
+sudo -E apt-get install -y python2.7-dev=2.7*;
+
+# Install packages needed by our python packages
+sudo -E apt-get install -y libmysqlclient-dev=5.6*;
+sudo -E apt-get install -y libatlas-base-dev=3.8*;
+sudo -E apt-get install -y gfortran=4:4.6*;
+
+# Install pip and virtualenv
+sudo -E easy_install pip;
+sudo -E pip install virtualenv;

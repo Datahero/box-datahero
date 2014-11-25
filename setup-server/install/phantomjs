@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "Installing Phantomjs";
+sudo -E cp ./phantomjs-1.9.7-linux-x86_64.tar.bz2 /usr/local/src/phantomjs-1.9.7-linux-x86_64.tar.bz2;
 cd /usr/local/src/;
-sudo -E wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2;
 sudo -E tar -xvf phantomjs-1.9.7-linux-x86_64.tar.bz2;
 sudo -E cp /usr/local/src/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs;
 

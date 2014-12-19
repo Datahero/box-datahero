@@ -27,3 +27,4 @@ $DIR/../install/mysql-client;
 $DIR/../install/mysql-server;
 $DIR/../install/haproxy
 $DIR/../install/redis
+$DIR/../install/selenium

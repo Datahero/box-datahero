@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Installing Selenium, Chrome, Firefox, and X11";
+
+# Add repo for chrome browser
+wget -q -O - "https://dl-ssl.google.com/linux/linux_signing_key.pub" | sudo -E apt-key add -;
+echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo -E tee -a /etc/apt/sources.list;
+sudo -E apt-get update;
+
+# Note: x11vnc is so you can run a vnc server and watch the selenium tests
+sudo -E apt-get -y install openjdk-7-jre google-chrome-stable firefox xvfb x11vnc;
+
+# Download / install selenium and chromedriver
+cd /tmp;
+wget "http://chromedriver.storage.googleapis.com/2.13/chromedriver_linux64.zip";
+wget "http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar";
+unzip chromedriver_linux64.zip;
+sudo -E mv chromedriver /usr/bin;
+sudo -E mv selenium-server-standalone-2.44.0.jar /usr/bin;

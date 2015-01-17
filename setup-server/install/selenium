@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get current directory of script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+
 echo "Installing Selenium, Chrome, Firefox, and X11";
 
 # Add repo for chrome browser
@@ -8,7 +11,14 @@ echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo -E tee -a /
 sudo -E apt-get update;
 
 # Note: x11vnc is so you can run a vnc server and watch the selenium tests
-sudo -E apt-get -y install openjdk-7-jre google-chrome-stable firefox xvfb x11vnc;
+sudo -E apt-get -y install openjdk-7-jre google-chrome-stable xvfb x11vnc;
+
+# Install firefox 34, 35 breaks our selenium tests. See Datahero/datahero-node/issues/10131
+sudo -E cp $DIR/firefox-34.0b2.tar.bz2 /opt/firefox-34.0b2.tar.bz2;
+cd /opt;
+sudo -E tar -xvf firefox-34.0b2.tar.bz2;
+sudo -E rm firefox-34.0b2.tar.bz2;
+sudo ln -s /opt/firefox/firefox /usr/bin/firefox
 
 # Download / install selenium and chromedriver
 cd /tmp;

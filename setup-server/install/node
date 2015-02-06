@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Installing Node v0.10.35 via NVM";
+echo "Installing Node v0.10.36 via NVM";
 git clone --depth 1 https://github.com/creationix/nvm.git ~/.nvm;
 source ~/.nvm/nvm.sh;
-nvm install v0.10.35;
-nvm alias default v0.10.35;
+nvm install v0.10.36;
+nvm alias default v0.10.36;
 echo "[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM" >> /home/$USER/.profile

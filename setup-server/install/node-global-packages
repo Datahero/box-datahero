@@ -1,7 +1,9 @@
 #!/bin/bash
 
-echo "Install global node packages forever and grunt-cli";
+echo "Install global node packages forever, grunt-cli, mocha, and node-inspector";
 # re-source the profile since nvm will now be in there
 source ~/.profile;
 npm install -g forever;
 npm install -g grunt-cli;
+npm install -g mocha;
+npm install -g node-inspector;

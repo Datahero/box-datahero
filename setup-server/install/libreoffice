@@ -2,22 +2,19 @@
 
 # TODO: As of GH #10911, we need libreoffice 4.3.5.  4.3.5 isn't in the main ubuntu repos (only 4.3.4, which is buggy)
 #   For now, we're going to add a more specific ppa to grab 4.3.5.  When 4.4 becomes stable, we can go back to this method.
+# TODO: When done with 4.3.5 (ie 4.4 stable), clean this up with a similar
+#   "add-apt-repository --remove ...libreoffice-4-3" in the main repo part commented out above.
 #echo "Installing LibreOffice 4.3";
 #sudo -E add-apt-repository -y ppa:libreoffice/ppa;
 #sudo -E apt-get update;
 #sudo -E apt-get install -y libreoffice=1:4.3*
 
 
-echo "Installing LibreOffice 4.3.5"
+echo "Installing LibreOffice 4.3"
 
 # Remove the main ubuntu package -- interferes with some stuff
-sudo -E add-apt-repository -y --remove ppa:libreoffice/ppa
-sudo -E add-apt-repository -y ppa:libreoffice/libreoffice-4-3
-sudo -E apt-get update
+sudo -E add-apt-repository -y --remove ppa:libreoffice/ppa;
+sudo -E add-apt-repository -y ppa:libreoffice/libreoffice-4-3;
+sudo -E apt-get update;
 
-# according to libreoffice release notes, 4.3.5~rc2 is "bit-identical" with the final 4.3.5
-sudo -E apt-get install -y libreoffice=1:4.3.5~rc2-0ubuntu1~precise1
-
-# TODO: When done with 4.3.5 (ie 4.4 stable), clean this up with a similar "add-apt-repository --remove" in the main repo 
-#       part commented out above.
-
+sudo -E apt-get install -y libreoffice=1:4.3.*;

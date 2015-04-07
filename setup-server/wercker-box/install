@@ -14,17 +14,17 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
 echo "Setting up DataHero Server";
 
 # Install all the things
-$DIR/../install/build-essentials
+$DIR/../install/build-essentials;
 $DIR/../install/ntp;
-$DIR/../install/libreoffice
-$DIR/../install/phantomjs
-$DIR/../install/fonts
-$DIR/../install/node
-$DIR/../install/node-global-packages
-$DIR/../install/python
-$DIR/../install/code-directory
+$DIR/../install/libreoffice;
+$DIR/../install/phantomjs;
+$DIR/../install/fonts;
+$DIR/../install/node;
+$DIR/../install/node-global-packages;
+$DIR/../install/python;
+$DIR/../install/code-directory;
 $DIR/../install/mysql-client;
 $DIR/../install/mysql-server;
-$DIR/../install/haproxy
-$DIR/../install/redis
-$DIR/../install/selenium
+$DIR/../install/haproxy;
+$DIR/../install/redis;
+$DIR/../install/selenium;

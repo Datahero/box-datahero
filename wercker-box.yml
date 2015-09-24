@@ -1,7 +1,7 @@
 name: datahero
-version: 3.0.0
+version: 4.0.0
 type: main
-platform: ubuntu@12.04
+platform: ubuntu@14.04
 description: Box for DataHero
 script: |
   ./setup-server/wercker-box/install
